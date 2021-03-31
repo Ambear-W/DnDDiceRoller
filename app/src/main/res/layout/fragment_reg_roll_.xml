@@ -14,7 +14,8 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="258dp"
-        android:text="Roll the Dice" />
+        android:text="Roll the Dice"
+        />
 
     <EditText
         android:id="@+id/numOfDice"
@@ -22,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="85dp"
         android:ems="10"
         android:gravity="center"
@@ -35,10 +36,10 @@
         android:id="@+id/D"
         android:layout_width="wrap_content"
         android:layout_height="38dp"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="122dp"
+        android:layout_marginStart="5dp"
         android:layout_marginTop="98dp"
+        android:layout_toEndOf="@+id/numOfDice"
         android:gravity="center"
         android:text="D"
         android:textSize="28sp" />
@@ -46,25 +47,25 @@
     <Spinner
         android:id="@+id/diceType"
         android:layout_width="wrap_content"
-        android:layout_height="49dp"
-        android:layout_alignParentStart="true"
+        android:layout_height="46dp"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="148dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
         android:layout_marginTop="94dp"
+        android:layout_toEndOf="@+id/D"
+        android:layout_toRightOf="@+id/D"
         android:entries="@array/diceType"
         android:gravity="center"
-        android:spinnerMode="dialog"
-        android:layout_toRightOf="@+id/D"/>
+        android:spinnerMode="dialog" />
 
     <RadioGroup
+        android:id="@+id/modGroup"
         android:layout_width="wrap_content"
-        android:layout_height="85dp"
+        android:layout_height="84dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_toRightOf="@+id/diceType"
-        android:layout_toLeftOf="@id/modNum"
+        android:layout_marginStart="5dp"
         android:layout_marginTop="85dp"
-        android:layout_marginEnd="142dp">
+        android:layout_toEndOf="@+id/diceType">
 
         <RadioButton
             android:id="@+id/plus"
@@ -83,16 +84,17 @@
         android:id="@+id/modNum"
         android:layout_width="98dp"
         android:layout_height="67dp"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="305dp"
+        android:layout_marginStart="5dp"
         android:layout_marginTop="85dp"
-        android:layout_marginEnd="15dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toEndOf="@+id/modGroup"
         android:ems="10"
-        android:inputType="number"
         android:gravity="center"
         android:hint="Modifier"
-        android:importantForAutofill="no" />
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="2"/>
 
 </RelativeLayout>
