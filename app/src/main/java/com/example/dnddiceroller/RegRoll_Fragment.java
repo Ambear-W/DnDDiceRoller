@@ -4,11 +4,19 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.logging.Logger;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -63,20 +71,45 @@ public class RegRoll_Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        return inflater.inflate(R.layout.fragment_reg_roll_, container, false);
-
-        /**
         View v = inflater.inflate(R.layout.fragment_reg_roll_, container, false);
 
-        String [] values =
-                {"4","6","8","10","12","20","%","100",};
-        Spinner spinner = (Spinner) v.findViewById(R.id.diceType);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, values);
-        adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
-        spinner.setAdapter(adapter);
+        Button rollDice = v.findViewById(R.id.rollRegDice);
 
+
+        rollDice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //Still need to figure out how it is grabing the number of dice
+                //figure out how to grab the type of dice
+                //figure out how to grab plus/minus
+                //figure out how to grab modifer
+
+                //figure out how to make the phone vibrate
+                //figure out how to do the file thingy aaron did
+                //  would like to be able to put the dice break downs there, but that is not needed
+
+                //then you can figure out the character sheet stuff if this isn't too hard to figure out
+
+                EditText diceNumber = (EditText) v.findViewById(R.id.numOfDice);
+                String tempNumberOfDice = diceNumber.getText().toString();
+                int numberOfDice = 0;
+
+                if("".equals(tempNumberOfDice)){
+                    //Toast.makeText(getContext(), "There are empty values", Toast.LENGTH_LONG).show();
+                    numberOfDice = 1;
+                }else{
+                    numberOfDice = Integer.parseInt(tempNumberOfDice);
+                    //put something here that will make it show the number of dice you have for now
+
+                }
+
+                //Toast.makeText(getContext(), finalNumberOfDice, Toast.LENGTH_LONG).show();
+            }
+        });
+
+
+        //return inflater.inflate(R.layout.fragment_reg_roll_, container, false);
         return v;
-         **/
     }
 }
