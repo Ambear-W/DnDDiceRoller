@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/numberOfDice"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context=".RegRoll_Fragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Reg Roll"
-        android:textColor="@color/black"
-        android:textSize="26sp" />
 
     <Button
         android:id="@+id/rollRegDice"
@@ -22,6 +14,85 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="258dp"
-        android:text="Button" />
+        android:text="Roll the Dice" />
+
+    <EditText
+        android:id="@+id/numOfDice"
+        android:layout_width="98dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="85dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Number of \nDice"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="3" />
+
+    <TextView
+        android:id="@+id/D"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="122dp"
+        android:layout_marginTop="98dp"
+        android:gravity="center"
+        android:text="D"
+        android:textSize="28sp" />
+
+    <Spinner
+        android:id="@+id/diceType"
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="94dp"
+        android:entries="@array/diceType"
+        android:gravity="center"
+        android:spinnerMode="dialog"
+        android:layout_toRightOf="@+id/D"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="85dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/diceType"
+        android:layout_toLeftOf="@id/modNum"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="142dp">
+
+        <RadioButton
+            android:id="@+id/plus"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="+" />
+
+        <RadioButton
+            android:id="@+id/minus"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:text="-" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/modNum"
+        android:layout_width="98dp"
+        android:layout_height="67dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="305dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="15dp"
+        android:ems="10"
+        android:inputType="number"
+        android:gravity="center"
+        android:hint="Modifier"
+        android:importantForAutofill="no" />
 
 </RelativeLayout>

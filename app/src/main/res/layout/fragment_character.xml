@@ -6,7 +6,6 @@
     android:background="@color/white"
     tools:context=".fragment_character">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_centerInParent="true"
         android:layout_width="wrap_content"
