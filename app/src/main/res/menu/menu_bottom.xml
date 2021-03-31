@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    app:cnb_unselectedColor="#fff"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/regular_roll"
+        android:title="Regular Roll"
+        android:icon="@drawable/ic_dice"
+        app:cnb_backgroundColor="#ff785b"
+        app:cnb_iconColor="#fff"
+        app:cnb_textColor="#fff"/>
+
+    <item
+        android:id="@+id/charater_roll"
+        android:title="Character Roll"
+        android:icon="@drawable/ic_character"
+        app:cnb_backgroundColor="#ff785b"
+        app:cnb_iconColor="#fff"
+        app:cnb_textColor="#fff"/>
+</menu>
